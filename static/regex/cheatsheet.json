@@ -1,156 +1,128 @@
 [
     {
         "regex": "/hello/",
-        "usage": "looks for the string between the forward slashes (case-sensitive)"
+        "usage": "查找两个正斜杠之间的字符串(区分大小写)"
     },
     {
         "regex": "/hello/i",
-        "usage": "looks for the string between the forward slashes (case-insensitive)"
+        "usage": "查找两个正斜杠之间的字符串(忽略大小写)"
     },
     {
         "regex": "/hello/g",
-        "usage": "looks for multiple occurrences of string between the forward slashes"
+        "usage": "在正斜杠之间查找出现过的多个字符串"
     },
     {
         "regex": "/h.llo/",
-        "usage": "the '.' matches any one character other than a new line character... matches 'hello', 'hallo' but not 'h<br>llo'"
+        "usage": " '.' 符号匹配除换行符以外的任何一个字符,匹配 'hello', 'hallo' 但是不匹配 'h<br>llo'"
     },
     {
         "regex": "/h.*llo/",
-        "usage": "the \"*\" matches any character(s) zero or more times... matches \"hello\", \"heeeeeello\", \"hllo\", \"hwarwareallo\""
+        "usage": " \"*\" 字符匹配零次或多次的任意字符...匹配 \"hello\", \"heeeeeello\", \"hllo\", \"hwarwareallo\""
     },
-
-
-
     {
         "regex": "/\\d/",
-        "usage": "matches any digit"
+        "usage": "匹配任意数字(digit)"
     },
     {
         "regex": "/\\D/",
-        "usage": "matches any non-digit"
+        "usage": "匹配任意非数字"
     },
     {
         "regex": "/\\w/",
-        "usage": "matches any word character (a-z, A-Z, 0-9, _)"
+        "usage": "匹配所有字符 (a-z, A-Z, 0-9, _)"
     },
     {
         "regex": "/\\W/",
-        "usage": "matches any non-word character"
+        "usage": "匹配任意非字符"
     },
     {
         "regex": "/\\s/",
-        "usage": "matches any white space character (\\r (carriage return),\\n (new line), \\t (tab), \\f (form feed))"
+        "usage": "匹配任意空白字符 (\\r (carriage return),\\n (换行符), \\t (制表符), \\f (form feed))"
     },
     {
         "regex": "/\\S/",
-        "usage": "matches any non-white space character"
+        "usage": "匹配任意非空白字符"
     },
-
-
     {
         "regex": "/[abcd]/",
-        "usage": "matches any character in square brackets"
+        "usage": "匹配方括号中的任意字符"
     },
     {
         "regex": "/[ch]at/",
-        "usage": "matches cat or hat"
+        "usage": "匹配 cat 或 hat"
     },
     {
         "regex": "/[^abcd]/",
-        "usage": "matches anything except the characters in square brackets"
+        "usage": "匹配除了方括号内的字符以外的任何内容"
     },
-
-
-
     {
         "regex": "/[a-z]/",
-        "usage": "matches all lowercase letters (a to z)"
+        "usage": "匹配所有的小写字母 (a 到 z)"
     },
     {
         "regex": "/[A-Z]/",
-        "usage": "matches all uppercase letters (A to Z)"
+        "usage": "匹配所有的大写字母 (A 到 Z)"
     },
     {
         "regex": "/[0-9]/",
-        "usage": "matches all digits"
+        "usage": "匹配所有的数字"
     },
     {
         "regex": "/[a-zA-Z]/",
-        "usage": "matches all lowercase and uppercase letters"
+        "usage": "匹配所有的小写字母和大写字母"
     },
     {
         "regex": "/[^a-zA-Z]/",
-        "usage": "matches non-letters"
+        "usage": "匹配非字母元素"
     },
     {
         "regex": "/[a-zA-Z0-9]/",
-        "usage": "matches all lowercase, uppercase letters and numbers"
+        "usage": "匹配所有小写,大写字母和数字"
     },
-
-
-    
     {
         "regex": "/(hello){4}/",
-        "usage": "matches \"hellohellohellohello\""
+        "usage": "匹配 \"hellohellohellohello\""
     },
     {
         "regex": "/hello{3}/",
-        "usage": "matches \"hellooo\" and \"helloooo\" but not \"helloo\""
+        "usage": "匹配 \"hellooo\" and \"helloooo\" 但不是 \"helloo\""
     },
     {
         "regex": "/(hello){1,3}/",
-        "usage": "matches \"hello\" that occur between 1 and 3 times (inclusive)"
+        "usage": "匹配出现在1到3次(包括)之间的 'hello' "
     },
     {
         "regex": "/(hello){3,}/",
-        "usage": "matches \"hello\" that occur atleast 3 times"
+        "usage": "匹配至少出现3次的 'hello' "
     },
-
-
-
-
-
     {
         "regex": "/ab*c/",
-        "usage": "matches zero or more repetitions of \"b\" (matches \"abc\", \"abbbbc\", \"ac\")"
+        "usage": "匹配 0 次或多次重复的 \"b\" (matches \"abc\", \"abbbbc\", \"ac\")"
     },
     {
         "regex": "/ab+c/",
-        "usage": "matches one or more repetitions of \"b\" (matches \"abc\", \"abbbbc\", but not \"ac\")"
+        "usage": "匹配 1 次或多次重复的 \"b\" (matches \"abc\", \"abbbbc\", but not \"ac\")"
     },
     {
         "regex": "/^/",
-        "usage": "matches beginning of a line"
+        "usage": "匹配行首"
     },
     {
         "regex": "/$/",
-        "usage": "matches end of a line"
+        "usage": "匹配行尾"
     },
-
-
-
-
-
     {
         "regex": "/(hard)?work/",
-        "usage": "matches \"work\" or \"hardwork\""
+        "usage": "匹配 \"work\" 或 \"hardwork\""
     },
     {
         "regex": "/(?:hard)?work/",
-        "usage": "matches \"work\" or \"hardwork\" but is a non-capturing group"
+        "usage": "匹配 \"work\" 或 \"hardwork\" but is a non-capturing group"
     },
-
-
-
-
     {
         "regex": "/i am a (cat|dog|whale) person/",
-        "usage": "matches \"i am a cat person\", \"i am a dog person\" and \"i am a whale person\""
+        "usage": "匹配 \"i am a cat person\", \"i am a dog person\" 和 \"i am a whale person\""
     },
-    
-
-
     {
         "regex": "/z(?=a)/",
         "usage": "positive lookahead... matches the \"z\" before the \"a\" in pizza but not the first \"z\""
